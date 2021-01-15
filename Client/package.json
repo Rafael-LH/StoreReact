@@ -1,0 +1,39 @@
+{
+  "name": "storereact",
+  "version": "1.0.0",
+  "description": "App created in ReactJS for sell products",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafael-LH/StoreReact.git"
+  },
+  "keywords": [
+    "Webpack",
+    "ReactJS"
+  ],
+  "author": "Rafael-LH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rafael-LH/StoreReact/issues"
+  },
+  "homepage": "https://github.com/Rafael-LH/StoreReact#readme",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "^4.5.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
