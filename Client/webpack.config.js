@@ -2,7 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = (env, argv) => {
-  console.log(env.mode);
+  console.log(argv.mode);
   return {
     entry: path.resolve(__dirname, './src/index.js'),
     output: {
