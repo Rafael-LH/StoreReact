@@ -1,14 +1,9 @@
 const reducers = (state, action) => {
   switch (action.type) {
-    case 'ENCREASE':
+    case 'FAVORITES':
       return {
         ...state,
-        counter: state.counter + 1
-      }
-    case 'DECREASE':
-      return {
-        ...state,
-        counter: state.counter - 1
+        favorites: [...state.favorites, action.payload]
       }
     default:
       return state

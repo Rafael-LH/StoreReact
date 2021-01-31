@@ -1,11 +1,11 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Header from '@components/Header'
+import Main from '@components/Main'
 import { Provider } from './Context'
 
 render(
   <Provider>
-    <Header />
+    <Main />
   </Provider>,
   document.getElementById('app')
 )
