@@ -1,11 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Main from '@components/Main'
-import { Provider } from './Context'
+import App from '@components/App'
 
 render(
-  <Provider>
-    <Main />
-  </Provider>,
+  <App />,
   document.getElementById('app')
 )

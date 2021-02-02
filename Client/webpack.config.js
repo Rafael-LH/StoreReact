@@ -7,7 +7,7 @@ module.exports = (env, argv) => {
     entry: path.resolve(__dirname, './src/index.js'),
     output: {
       path: path.resolve(__dirname, './dist'),
-      filename: 'build.js',
+      filename: 'bundle.js',
       publicPath: '/'
     },
     resolve: {
@@ -21,6 +21,7 @@ module.exports = (env, argv) => {
     devServer: {
       host: '0.0.0.0',
       port: 9000,
+      compress: true,
       historyApiFallback: true
     },
     devtool: 'eval-source-map',
