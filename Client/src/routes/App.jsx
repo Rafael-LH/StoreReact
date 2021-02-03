@@ -7,11 +7,13 @@ import Payment from '@pages/Payment'
 import Success from '@pages/Success'
 import NotFound from '@pages/NotFound'
 import Layout from '@components/Layout'
+import { GlobalStyles } from '../assets/styles/globalStyles'
 
 const App = () => {
   return (
     <Router>
       <Layout>
+        <GlobalStyles />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/checkout" component={Checkout} />

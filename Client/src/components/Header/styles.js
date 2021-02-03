@@ -17,7 +17,6 @@ export const Header = styled.div`
     margin-left: 5px;
   }
   .Header a {
-    text-decoration: none;
     color: #33b1ff;
   }
 `

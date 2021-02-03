@@ -1,58 +1,29 @@
 import styled from 'styled-components'
 
-export const Information = styled.div`
-  .Information {
-    grid-template-columns: 3fr 1fr;
-    grid-gap: 2rem;
-    grid-row-gap: 1.5em;
-    display: grid;
-    margin: 0 0 4em 0;
-  }
-  .Information-buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .Information-sidebar {
-    margin: 10px 0 0 0;
-  }
-  .Information-back {
-    margin: 10px 0 0 0;
-  }
-  .Information-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .Information-item .fas {
-    margin: 0 0 0 10px;
-    color: rgba(0,0,0,0.4);
-    cursor: pointer;
-  }
-  .Information-item button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-  }
-  .Information-element {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    border-bottom: 1px solid #eee;
-  }
-  .Information-element h4 {
-    margin: 0;
-  }
+export const InformationContainer = styled.div`
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 2rem;
+  grid-row-gap: 1.5em;
+  display: grid;
+  margin: 0 0 4em 0;
   h2 {
     margin: 0 0 8px 0;
-    padding: 0;
   }
+`
+export const InformationButtons = styled.div`
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   h3 {
     font-size: 18px;
     margin: 0 0 8px 0;
-    padding: 0;
   }
+  /* .Information-back {
+    margin: 10px 0 0 0;
+  } */
+`
+export const Form = styled.form`
   input {
     background-color: #fff;
     background-image: none;
@@ -71,8 +42,30 @@ export const Information = styled.div`
     width: 100%;
     box-sizing: border-box;
   }
-  .Information-buttons {
-    margin: 10px 0 0 ;
+`
+export const InformationElement = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  h4 {
+    margin: 0;
+  }
+`
+export const InformationItem = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* .Information-item .fas {
+    margin: 0 0 0 10px;
+    color: rgba(0,0,0,0.4);
+    cursor: pointer;
+  }
+  .Information-item button {
+    background-color: transparent;
+    border: none;
+    outline: none;
   }
   .Information button {
     box-shadow: inset 0px 1px 0px 0px #bee2f9;
@@ -91,6 +84,6 @@ export const Information = styled.div`
     text-shadow: 0px 1px 0px #7cacde;
     width: 100%;
     display: block;
-    outline: none;
-}
+    outline: none; 
+} */
 `
