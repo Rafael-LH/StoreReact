@@ -1,29 +1,27 @@
 import styled from 'styled-components'
 
-export const Payment = styled.div`
-  .Payment {
-    grid-template-columns: 3fr 1fr;
-    grid-gap: 2rem;
-    grid-row-gap: 1.5em;
-    display: grid;
-  }
-  .Payment-back {
+export const PaymentContainer = styled.div`
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 2rem;
+  grid-row-gap: 1.5em;
+  display: grid;
+  /* .Payment-back {
     margin: 10px 0 0 0;
-  }
-  .Payment-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .Payment-item .fas {
-    margin: 0 0 0 10px;
-    color: rgba(0,0,0,0.4);
-    cursor: pointer;
-  }
-  .Payment-item button {
+  } */
+`
+export const PaymentItem = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
     background-color: transparent;
     border: none;
     outline: none;
+  }
+  /* .Payment-item .fas {
+    margin: 0 0 0 10px;
+    color: rgba(0,0,0,0.4);
+    cursor: pointer;
   }
   .Payment-element {
     display: flex;
@@ -34,5 +32,5 @@ export const Payment = styled.div`
   }
   .Payment-element h4 {
     margin: 0;
-  }
+  } */
 `

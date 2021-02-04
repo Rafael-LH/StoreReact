@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { InformationContainer, Form, InformationButtons, InformationItem, InformationElement } from './styles'
 
 const Information = () => {
@@ -19,7 +20,9 @@ const Information = () => {
         </Form>
         <InformationButtons>
           <div>Regresar</div>
-          <div>Pagar</div>
+          <Link to='/checkout/payment'>
+            <div>Pagar</div>
+          </Link>
         </InformationButtons>
       </div>
       <div>
