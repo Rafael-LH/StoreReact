@@ -1,29 +1,47 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from '@context/Context'
 import { CheckoutElement, Element, ItemContent, Item, SideBar } from './styles'
 import { Link } from 'react-router-dom'
 import { FaTrashAlt } from 'react-icons/fa'
-
 const Checkout = () => {
+  const { data: { cart }, removeFromCart } = useContext(Context)
+
+  const handleRemove = product => () => {
+    console.log(product);
+    removeFromCart(product)
+  }
+  const handleSumTotal = () => {
+    const reducer = (acc, cvalue) => acc + cvalue.price
+    const sum = cart.reduce(reducer, 0)
+    return sum
+  }
   return (
     <CheckoutElement>
       <ItemContent>
         <h3>Lista de Pedidos:</h3>
-        <Item>
-          <Element>
-            <h4>Item Name</h4>
-            <span>$10</span>
-          </Element>
-          <button type="button">
-            <FaTrashAlt />
-          </button>
-        </Item>
+        {cart.length > 0 ? <h3>Lista de pedidos</h3> : <h3>Sin pedidos</h3>}
+        {
+          cart.map(item => (
+            <Item>
+              <Element>
+                <h4>{item.title}</h4>
+                <span>$ {item.price}</span>
+              </Element>
+              <button type="button" onClick={handleRemove(item)}>
+                <FaTrashAlt />
+              </button>
+            </Item>
+          ))
+        }
       </ItemContent>
-      <SideBar>
-        <h3>Precio total: $10</h3>
-        <Link to='/checkout/information'>
-          <button>Continuar Pedido</button>
-        </Link>
-      </SideBar>
+      {cart.length > 0 &&
+        <SideBar>
+          <h3>Precio total: $ {handleSumTotal()}</h3>
+          <Link to='/checkout/information'>
+            <button>Continuar Pedido</button>
+          </Link>
+        </SideBar>
+      }
     </CheckoutElement>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Item, Img, Info, Button } from './styles'
 
-const Product = ({ product }) => {
+const Product = ({ product, handleAddToCart }) => {
   return (
     <Item>
       <Img src={product.image} alt={product.title} />
@@ -12,7 +12,7 @@ const Product = ({ product }) => {
         </h2>
         <p>{product.description}</p>
       </Info>
-      <Button type="button">Comprar</Button>
+      <Button type="button" onClick={handleAddToCart(product)}>Comprar</Button>
     </Item>
   )
 }

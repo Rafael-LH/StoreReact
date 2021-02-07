@@ -4,11 +4,11 @@ import { Link as LinkRouter } from 'react-router-dom'
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  /* .Header-alert {
-    color: #33b13a;
-    font-size: 14px;
-    margin-left: 5px;
-  } */
+`
+export const Alert = styled.div`
+  color: #33b13a;
+  font-size: 14px;
+  margin-left: 5px;
 `
 export const Checkout = styled.div`
   display: flex;

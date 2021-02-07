@@ -12,6 +12,7 @@ export const ItemContent = styled.div`
   flex-wrap: wrap;
   h3{
     width: 100%;
+    margin-bottom: 10px;
   }
 `
 export const Item = styled.div`

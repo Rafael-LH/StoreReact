@@ -1,19 +1,26 @@
-import React, { createContext, useState } from 'react'
+import React, { useState } from 'react'
+import initialState from '../initialState.js'
 
-export const Context = createContext()
-
+export const Context = React.createContext()
 export const Provider = ({ children }) => {
-  const [user, setUser] = useState(() => {
-    return JSON.parse(JSON.stringify(localStorage.getItem('user')))
-      ? JSON.parse(localStorage.getItem('user'))
-      : {}
-  })
+  const [data, setData] = useState(initialState)
+
+  const addToCart = paylaod => {
+    setData({
+      ...data,
+      cart: [...data.cart, paylaod]
+    })
+  }
+  const removeFromCart = paylaod => {
+    setData({
+      ...data,
+      cart: data.cart.filter(item => item.id !== paylaod.id)
+    })
+  }
   const value = {
-    user,
-    userUpdate: (newData) => {
-      setUser(newData)
-      localStorage.setItem('user', JSON.stringify(newData))
-    }
+    data,
+    addToCart,
+    removeFromCart
   }
   return (
     <Context.Provider value={value}>
