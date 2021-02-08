@@ -17,10 +17,17 @@ export const Provider = ({ children }) => {
       cart: data.cart.filter(item => item.id !== paylaod.id)
     })
   }
+  const addToBuyer = (payload) => {
+    setData({
+      ...data,
+      buyer: [...data.buyer, payload]
+    })
+  }
   const value = {
     data,
     addToCart,
-    removeFromCart
+    removeFromCart,
+    addToBuyer
   }
   return (
     <Context.Provider value={value}>

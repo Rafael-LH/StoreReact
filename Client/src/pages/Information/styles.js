@@ -19,6 +19,25 @@ export const InformationButtons = styled.div`
     font-size: 18px;
     margin: 0 0 8px 0;
   }
+  button {
+    width: 120px;
+    box-shadow: inset 0px 1px 0px 0px #bee2f9;
+    background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+    background-color: #63b8ee;
+    border-radius: 6px;
+    border: 1px solid #3866a3;
+    display: inline-block;
+    cursor: pointer;
+    color: #14396a;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #7cacde;
+    display: block;
+    outline: none;
+  }
   /* .Information-back {
     margin: 10px 0 0 0;
   } */
@@ -66,24 +85,5 @@ export const InformationItem = styled.div`
     background-color: transparent;
     border: none;
     outline: none;
-  }
-  .Information button {
-    box-shadow: inset 0px 1px 0px 0px #bee2f9;
-    background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
-    background-color: #63b8ee;
-    border-radius: 6px;
-    border: 1px solid #3866a3;
-    display: inline-block;
-    cursor: pointer;
-    color: #14396a;
-    font-family: Arial;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 6px 24px;
-    text-decoration: none;
-    text-shadow: 0px 1px 0px #7cacde;
-    width: 100%;
-    display: block;
-    outline: none; 
-} */
+  }*/
 `

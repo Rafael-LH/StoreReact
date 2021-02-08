@@ -11,3 +11,14 @@ services:
     volumes: 
       - ./Client:/usr/src/app
       - /usr/src/app/node_modules
+
+  server_react_store:
+    container_name: server_react_store
+    build: 
+      context: Server/
+      dockerfile: Dockerfile
+    ports: 
+      - "${SERVER_PORT}:${SERVER_PORT}"
+    volumes:
+      - ./Server:/usr/src/app
+      - /usr/src/app/node_modules
