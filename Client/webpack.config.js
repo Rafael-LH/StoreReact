@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = (env, argv) => {
   console.log(argv.mode);
@@ -16,7 +17,9 @@ module.exports = (env, argv) => {
         '@components': path.resolve(__dirname, './src/components'),
         '@pages': path.resolve(__dirname, './src/pages'),
         '@hooks': path.resolve(__dirname, './src/hooks'),
-        '@context': path.resolve(__dirname, './src')
+        '@context': path.resolve(__dirname, './src'),
+        '@config': path.resolve(__dirname, './src/config'),
+        '@helpers': path.resolve(__dirname, './src/helpers'),
       }
     },
     devServer: {
@@ -43,6 +46,9 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, './public/index.html'),
         filename: 'index.html'
+      }),
+      new webpack.EnvironmentPlugin({
+        paypalClientId: process.env.PAYPAL_CLIENT_ID
       })
     ]
   }

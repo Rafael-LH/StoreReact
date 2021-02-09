@@ -18,19 +18,19 @@ export const PaymentItem = styled.div`
     border: none;
     outline: none;
   }
-  /* .Payment-item .fas {
-    margin: 0 0 0 10px;
-    color: rgba(0,0,0,0.4);
-    cursor: pointer;
-  }
-  .Payment-element {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    border-bottom: 1px solid #eee;
-  }
-  .Payment-element h4 {
-    margin: 0;
-  } */
 `
+export const PaymentArticle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  h4{
+    margin: 0px;
+  }
+`
+  // .Payment-item .fas {
+  // margin: 0 0 0 10px;
+  // color: rgba(0,0,0,0.4);
+  // cursor: pointer;
+  // }

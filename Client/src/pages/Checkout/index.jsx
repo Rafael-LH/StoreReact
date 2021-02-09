@@ -1,19 +1,17 @@
 import React, { useContext } from 'react'
 import { Context } from '@context/Context'
-import { CheckoutElement, Element, ItemContent, Item, SideBar } from './styles'
+import { sumTotal } from '@helpers/sumTotal'
 import { Link } from 'react-router-dom'
 import { FaTrashAlt } from 'react-icons/fa'
+import { CheckoutElement, Element, ItemContent, Item, SideBar } from './styles'
 const Checkout = () => {
   const { data: { cart }, removeFromCart } = useContext(Context)
 
   const handleRemove = product => () => {
-    console.log(product);
     removeFromCart(product)
   }
   const handleSumTotal = () => {
-    const reducer = (acc, cvalue) => acc + cvalue.price
-    const sum = cart.reduce(reducer, 0)
-    return sum
+    return sumTotal(cart)
   }
   return (
     <CheckoutElement>

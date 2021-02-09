@@ -23,11 +23,18 @@ export const Provider = ({ children }) => {
       buyer: [...data.buyer, payload]
     })
   }
+  const addNewOrder = (payload) => {
+    setData({
+      ...data,
+      orders: [...state.data, payload]
+    })
+  }
   const value = {
     data,
     addToCart,
     removeFromCart,
-    addToBuyer
+    addToBuyer,
+    addNewOrder
   }
   return (
     <Context.Provider value={value}>

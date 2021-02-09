@@ -6,6 +6,10 @@ services:
     build:
       context: Client/
       dockerfile: Dockerfile
+    environment: 
+      PAYPAL_CLIENT_ID: ${PAYPAL_CLIENT_ID}
+      PAYPAL_ACCOUNT: ${PAYPAL_ACCOUNT}
+      PAYPAL_TOKEN: ${PAYPAL_TOKEN}
     ports: 
       - "${CLIENT_PORT}:${CLIENT_PORT}"
     volumes: 
