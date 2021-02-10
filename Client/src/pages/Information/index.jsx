@@ -34,7 +34,7 @@ const Information = () => {
         <h3>Pedido: </h3>
         {
           cart.map(item => (
-            <InformationItem >
+            <InformationItem key={item.title}>
               <InformationElement>
                 <h4>{item.title}</h4>
                 <span>$ {item.price}</span>

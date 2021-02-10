@@ -26,7 +26,7 @@ export const Provider = ({ children }) => {
   const addNewOrder = (payload) => {
     setData({
       ...data,
-      orders: [...state.data, payload]
+      orders: [...data.orders, payload]
     })
   }
   const value = {

@@ -11,20 +11,28 @@ export const PaymentContainer = styled.div`
 `
 export const PaymentItem = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  h3{
+    width: 100%;
+    margin-bottom: 10px;
+  }
   button {
+    width: 100%;
     background-color: transparent;
     border: none;
     outline: none;
   }
 `
 export const PaymentArticle = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   border-bottom: 1px solid #eee;
+  margin-bottom: 7px;
   h4{
     margin: 0px;
   }
