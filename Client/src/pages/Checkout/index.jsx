@@ -18,8 +18,8 @@ const Checkout = () => {
       <ItemContent>
         {cart.length > 0 ? <h3>Lista de pedidos</h3> : <h3>Sin pedidos</h3>}
         {
-          cart.map(item => (
-            <Item key={item.title}>
+          cart.map((item, index) => (
+            <Item key={index}>
               <Element>
                 <h4>{item.title}</h4>
                 <span>$ {item.price}</span>
